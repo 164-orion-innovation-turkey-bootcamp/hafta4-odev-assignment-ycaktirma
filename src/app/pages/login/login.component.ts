@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { UserLogin } from 'src/app/models/user-login';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
@@ -9,10 +10,12 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   loginForm:FormGroup | any;
   showLoginErrorMessageBox:boolean = false;
+
+  loginSubscription:Subscription | null = null;
   constructor(private formBuilder:FormBuilder, private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
@@ -20,6 +23,14 @@ export class LoginComponent implements OnInit {
     this.createLoginForm();
   }
 
+  ngOnDestroy(): void {
+    if(this.loginSubscription != null){
+      this.loginSubscription.unsubscribe();
+    }
+    
+  }
+
+  //Create login form
   createLoginForm() {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required] ],
@@ -39,7 +50,7 @@ export class LoginComponent implements OnInit {
     };
 
     //Send request
-    this.authService.login(user).subscribe(success=>{
+    this.loginSubscription = this.authService.login(user).subscribe(success=>{
       if(success){
         this.router.navigateByUrl('/shop');
       }else{

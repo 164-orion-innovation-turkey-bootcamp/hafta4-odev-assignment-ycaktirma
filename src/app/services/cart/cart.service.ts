@@ -17,6 +17,17 @@ export class CartService {
 
   constructor(private sessionService:SessionService,private http:HttpClient,private productService:ProductService, private jsonServerLogger:JsonServerLoggerService) { }
 
+
+  //Initialize cart object. (This is used when new account registers)
+  initializeUserCartOnDatabase(user_id:number){
+
+    //Cart object
+    let postData={
+      user_id:user_id,
+      cart:[]
+    }
+    return this.http.post(this.targetApiEndpoint,postData);
+  }
   /**
    * Returns cart, Object:{id:number, user_id:number, cart:{product_id:number, count:number}[]}
    * @returns Observable<Object>

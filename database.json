@@ -8,25 +8,46 @@
       "password": "123qwe"
     },
     {
-      "username": "yarkin2",
+      "username": "askjdnasj",
       "password": "123qwe",
-      "name": "Jonatjon",
-      "email": "dsad@gmail.com",
+      "name": "jkasndasjk",
+      "email": "asjdasd@gmail.com",
+      "id": 2
+    },
+    {
+      "username": "askjdnasj",
+      "password": "123qwe",
+      "name": "jkasndasjk",
+      "email": "asjdasda@gmail.com",
       "id": 3
     },
     {
-      "username": "ycaktirma",
-      "password": "yarkin123",
-      "name": "Yarkın",
-      "email": "ycaktirma@gmail.com",
+      "username": "kjdnasdk",
+      "password": "123qwe",
+      "name": "askjdnasjkd",
+      "email": "ycaktirma2@gmail.com",
       "id": 4
     },
     {
-      "username": "elonmusk",
-      "password": "elon123",
-      "name": "Elon Musk",
-      "email": "musk@tesla.com",
+      "username": "yarkin",
+      "password": "123qwe",
+      "name": "yarkin",
+      "email": "ycaktirma213@gmail.com",
       "id": 5
+    },
+    {
+      "username": "yarkin123",
+      "password": "123qwe",
+      "name": "yarkin123",
+      "email": "ycaktirma10@gmail.com",
+      "id": 6
+    },
+    {
+      "username": "askjdna",
+      "password": "123qwe",
+      "name": "kjasndjak",
+      "email": "ycaktirma99@gmail.com",
+      "id": 7
     }
   ],
   "products": [
@@ -80,94 +101,12 @@
       "category": "Smoothie"
     }
   ],
-  "productComments": [
-    {
-      "id": 1,
-      "user_id": 5,
-      "product_id": 1,
-      "comment": "I always drink this one while working on new model Tesla"
-    },
-    {
-      "id": 2,
-      "user_id": 5,
-      "product_id": 1,
-      "comment": "I always drink this one while working on new model Tesla"
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "İlk yorum",
-      "id": 3
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "yorum 2",
-      "id": 4
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "sadasdsadsadsadsadsadsadasadasdsadsadsadsadsadsadasadasdsadsadsadsadsadsadasadasdsadsadsads",
-      "id": 5
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "asdasd",
-      "id": 6
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "asdsadasadpppp",
-      "id": 7
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "ad",
-      "id": 8
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "adsad",
-      "id": 9
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "hhhhhhhhh",
-      "id": 10
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "adsadasdad",
-      "id": 11
-    },
-    {
-      "user_id": 1,
-      "product_id": 3,
-      "comment": "deneme",
-      "id": 12
-    }
-  ],
+  "productComments": [],
   "shoppingCart": [
     {
       "id": 1,
       "user_id": 1,
-      "cart": [
-        {
-          "product_id": 3,
-          "count": 2
-        },
-        {
-          "product_id": 2,
-          "count": 4
-        }
-      ]
+      "cart": []
     }
   ],
   "logs": [
@@ -175,6 +114,21 @@
       "message": "User <1> purchased some coffees.",
       "createdDate": "2022-03-20T19:46:50.314Z",
       "id": 1
+    },
+    {
+      "message": "User <1> purchased some coffees.",
+      "createdDate": "2022-03-20T22:09:10.225Z",
+      "id": 2
+    },
+    {
+      "message": "User <14> purchased some coffees.",
+      "createdDate": "2022-03-20T22:37:11.149Z",
+      "id": 3
+    },
+    {
+      "message": "User <1> purchased some coffees.",
+      "createdDate": "2022-03-20T23:26:42.485Z",
+      "id": 4
     }
   ]
 }

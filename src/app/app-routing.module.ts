@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShopGuard } from './guards/shop.guard';
+import { HomeGuard } from './guards/home.guard';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   },
   {
     path:'home',
-    component:HomepageComponent
+    component:HomepageComponent,
+    canActivate: [HomeGuard],
   },
   {
     path:'shop',
