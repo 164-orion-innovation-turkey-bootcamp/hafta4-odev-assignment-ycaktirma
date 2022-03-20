@@ -158,7 +158,12 @@
     {
       "id": 1,
       "user_id": 1,
-      "cart": []
+      "cart": [
+        {
+          "product_id": 3,
+          "count": 2
+        }
+      ]
     }
   ],
   "logs": [
