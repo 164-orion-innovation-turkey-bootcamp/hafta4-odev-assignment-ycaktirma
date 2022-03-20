@@ -1,0 +1,23 @@
+
+.button-search{
+    background-color: #C87D39;
+    color: white;
+    border:none
+}
+
+.product-column{
+    margin-top:150px;
+}
+
+
+.bean-container{
+    width: 480px;
+    height: 480px;
+    z-index: -2;
+    position: fixed;
+    bottom:0px;
+    left: 20px;
+}
+.bean-image{
+    width: 100%;
+}
