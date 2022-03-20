@@ -1,43 +1,27 @@
-# 4. Hafta Ödevi
+# Yarkinscoffeestore
 
-Ürün satışının, kullanıcı kaydının ve girişinin yapıldığı, web uygulaması geliştirilecek.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
+## Development server
 
-<strong>Fonksiyoneliteler: </strong>
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-• Uygulama responsive tasarımı desteklemeli, mobil ve bilgisayar ekranlarına uyumlu 
-çalışmalı (ui component frameworkleri, libraryleri kullanılabilir)  
-• Kullanıcılar uygulamaya üye olabilmeli ve giriş yapabilmeli (json dosyasına kayıt 
-oluşturulup, json dosyasından doğrulama yapılabilir, ya da ekstra bir api yazılabilir)  
-• Ürün kartında bulunması gerekenler; ürünlerin resmi, adı, açıklaması ve fiyatı  
-• Ürün listesi ana sayfada gösterilmeli, kullanıcılar isterlerse ürünlerin detayına, 
-ürünlerin üzerine tıklayarak bakabilmeli  
-• Ürünlerin detay sayfasında, ürünün daha büyük bir resmi ve daha detaylı bir açıklama 
-metni olmalı  
-• Ürünlerin filtrelenmesi için; kategori seçeneği (dropdown, selector, kategorileri siz 
-belirlemelisiniz) ve bir arama çubuğu oluşturulmalı, anahtar kelimesinin ürün adında 
-geçip geçmediğine bakılmalı  
-• Ürün detayına gidilirken, sayfa yönlendirilmesi (routing) yapılmalı  
-• Ürünler kendinizin belirleyeceği bir json kaynak dosyasından alınmalı  
-• Ürünler sepete eklenip daha sonrasında satış işlemi gerçekleştirilmeli  
-• Satış işlemi için ayrı bir json dosyasına log kaydı atılması yeterli  
-• Kullanıcı sisteme giriş yapmadan ürünleri görmemeli  
+## Code scaffolding
 
-<strong>Gereklilikler: </strong>
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-• Reactive form yaklaşımı kullanılmalı  
-• Form işlemlerinde validasyon yönetimi yapılmalı ve kullanıcı dostu bir uyarı mesajı 
-üretilmeli  
-• Http istekleri için HttpClient paketi kullanılmalı  
-• Comment kullanımına dikkat edilmeli  
-• TypeScript özelliklerinden type ve access modifiers kullanımına dikkat edilmeli  
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-<strong>Ekstralar: </strong>
+## Running unit tests
 
-• Ürünlerin detay kısmında, ürün ile ilgili oluşturulacak dummy(sahte) yorumların ve 
-değerlendirmelerin görüntülenmesi  
-• Component mimarisinin anlaşılır, tekrar kullanılabilecek şekilde kurgulanması  
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
-Teknolojiler: Angular (13), JavaScript, TypeScript
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

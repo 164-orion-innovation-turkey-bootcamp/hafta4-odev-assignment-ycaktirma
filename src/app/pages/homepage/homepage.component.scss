@@ -1,0 +1,77 @@
+
+.headers-container-row{
+    margin-top:100px
+}
+.headers-sub{
+    color: #B7AC9B;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:0;
+}
+.headers-hero{
+    color:#4E2F2C;
+    font-size: 300%;
+}
+.actions-container{
+    margin-top: 50px;
+}
+.round{
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    float:left;
+    position: absolute;
+    transform: translate(-100px,-100px);
+    z-index: -1; 
+}
+.actions-form{
+    width:100%;
+    height: 250px;
+    background-color: #4e2f2cdc;
+    border-radius: 39px;
+    z-index: 2;
+    position: relative;
+    animation: cardEase ease 0.7s forwards;
+    left: 1550px;
+    
+}
+  
+@keyframes cardEase {
+    100% {
+        transform: translateX(-1550px);
+     }
+}
+.actions-form:hover{
+    transform: translateX(-50px);
+}
+.actions-form-header{
+    color: #B7AC9B;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+.action-form-buttons{
+    margin-top:80px;
+    width: 100%;
+}
+.action-button{
+    width: 44%;
+    margin-left: 5%;
+    background-color: #E4615D;
+    border: none;
+}
+
+.bean-container{
+    width: 480px;
+    height: 480px;
+    z-index: -2;
+    position: fixed;
+    bottom:0px;
+    left: 20px;
+}
+.bean-image{
+    width: 100%;
+}

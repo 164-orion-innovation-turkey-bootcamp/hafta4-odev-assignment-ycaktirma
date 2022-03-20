@@ -1,0 +1,39 @@
+.header{
+    width: 100%;
+    height: 8vh;
+    border-bottom: 1px solid #B7AC9B;
+}
+.logo{
+    width: 100%;
+    height: 8vh;
+}
+.navigation{
+    width: 100%;
+    height: 8vh;
+}
+.navigation-list{
+    height: 100%;
+    width: 100%;
+    margin-right: 15%;
+}
+.navigation-list .navigation-item{
+    display: inline-block;
+    height: 100%;
+    width: 25%;
+    margin-left:15%;
+}
+.navigation-link{
+    position: relative;
+    top:40%;
+    left: 25%;
+    text-decoration: none;
+    color: #B7AC9B;
+    font-weight: 500;
+    transition: color 0.4s;
+}
+.navigation-link:hover{
+    color:#C87D39;
+}
+.navigation-link-active{
+    color:#C87D39;
+}

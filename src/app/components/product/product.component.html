@@ -1,0 +1,17 @@
+<div class="product-container">
+    <div class="info-card">
+        <div *ngIf="product != null">
+            <img [src]="product.image" alt="americano" class="coffe-img">
+            <div class="arrow" [routerLink]="['/shop/product',product.id]"> <fa-icon [icon]="faArrowRight"></fa-icon> </div>
+            <div class="round"></div>
+            <div class="product-actions">
+                <h5 class="product-name">{{product.name}}</h5>
+                <p class="product-price">{{product.price | currency}}</p>
+                <button (click)="removeItemFromCart(product)" type="button" class="btn btn-warning action-button button-product-card-remove"> <fa-icon [icon]="faMinus"></fa-icon> </button>
+                <input type="text" class="form-control" placeholder="0" [ngModel]="productCount" disabled class="product-card-input">
+                <button (click)="addItemToCart(product)" type="button" class="btn btn-warning action-button button-product-card-add"> <fa-icon [icon]="faPlus"></fa-icon> </button>
+            </div>
+        </div>
+        
+    </div>
+</div>

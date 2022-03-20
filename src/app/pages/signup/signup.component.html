@@ -1,0 +1,70 @@
+<div class="container">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-12 header p-5">
+                <h1 class="signup-header">Sign up</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 p-5 pb-2 pt-0">
+                <label for="basic-url" class="form-label form-input-label mb-0">Username</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-input" placeholder="Username" formControlName="username">
+                </div>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('username')?.hasError('required') && signupForm.get('username')?.touched == true">Username is required.</p>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('username')?.hasError('minlength') && signupForm.get('username')?.touched == true">Username should be at least three characters</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 p-5 pb-2 pt-0">
+                <label for="basic-url" class="form-label form-input-label mb-0">Name</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-input" placeholder="Jonathon" formControlName="name">
+                </div>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('name')?.hasError('required') && signupForm.get('name')?.touched == true">Name is required.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 p-5 pb-2 pt-0">
+                <label for="basic-url" class="form-label form-input-label mb-0">E-mail</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-input" placeholder="example@mail.com" formControlName="email">
+                </div>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('email')?.hasError('required') && signupForm.get('email')?.touched == true">Email is required.</p>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('email')?.hasError('pattern') && signupForm.get('email')?.touched == true">E-mail is not valid.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 p-5 pb-2 pt-0">
+                <label for="basic-url" class="form-label form-input-label mb-0">Password</label>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control form-input" placeholder="Password" formControlName="password">
+                </div>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('password')?.hasError('required') && signupForm.get('password')?.touched == true">Password is required.</p>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.get('password')?.hasError('minlength') && signupForm.get('password')?.touched == true">Password should be at least six characters.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 p-5 pb-2 pt-0">
+                <label for="basic-url" class="form-label form-input-label mb-0">Password again</label>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control form-input" placeholder="Type your password again" formControlName="passwordAgain">
+                </div>
+                <p class="mt-0 pt-0 input-error" *ngIf="signupForm.hasError('samePassword') && signupForm.get('passwordAgain')?.touched == true">Passwords doesn't match.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <button class="btn btn-danger signup-button" type="submit" [disabled]='!signupForm.valid'>Sign up</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+<!--Background coffee bean-->
+<div class="bean-container">
+    <img src="../../../assets/images/coffebeanvector.png" alt="coffeebean" class="bean-image">
+</div>
+

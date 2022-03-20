@@ -1,0 +1,171 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ycaktirma",
+      "name": "Yarkın",
+      "email": "ycaktirma@gmail.com",
+      "password": "123qwe"
+    },
+    {
+      "username": "yarkin2",
+      "password": "123qwe",
+      "name": "Jonatjon",
+      "email": "dsad@gmail.com",
+      "id": 3
+    },
+    {
+      "username": "ycaktirma",
+      "password": "yarkin123",
+      "name": "Yarkın",
+      "email": "ycaktirma@gmail.com",
+      "id": 4
+    },
+    {
+      "username": "elonmusk",
+      "password": "elon123",
+      "name": "Elon Musk",
+      "email": "musk@tesla.com",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Americano",
+      "shortDescription": "Standart americano",
+      "description": "Standart americano for black coffe lovers.",
+      "price": "23.99",
+      "image": "assets/images/coffeemockup2.png",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "Espresso",
+      "shortDescription": "Standart espresso",
+      "description": "Standart espresso for black coffe lovers.",
+      "price": "23.99",
+      "image": "assets/images/coffeemockup2.png",
+      "category": 1
+    },
+    {
+      "id": 3,
+      "name": "Demo ürün 1",
+      "shortDescription": "Demo ürün 1",
+      "description": "Demo ürün 1",
+      "price": "23.99",
+      "image": "assets/images/coffeemockup2.png",
+      "category": 1
+    }
+  ],
+  "productCategories": [
+    {
+      "id": 1,
+      "category": "Classics"
+    },
+    {
+      "id": 2,
+      "category": "Caffeine bombs"
+    },
+    {
+      "id": 3,
+      "category": "Get me something sweet"
+    },
+    {
+      "id": 4,
+      "category": "Milk Rich"
+    },
+    {
+      "id": 5,
+      "category": "Smoothie"
+    }
+  ],
+  "productComments": [
+    {
+      "id": 1,
+      "user_id": 5,
+      "product_id": 1,
+      "comment": "I always drink this one while working on new model Tesla"
+    },
+    {
+      "id": 2,
+      "user_id": 5,
+      "product_id": 1,
+      "comment": "I always drink this one while working on new model Tesla"
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "İlk yorum",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "yorum 2",
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "sadasdsadsadsadsadsadsadasadasdsadsadsadsadsadsadasadasdsadsadsadsadsadsadasadasdsadsadsads",
+      "id": 5
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "asdasd",
+      "id": 6
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "asdsadasadpppp",
+      "id": 7
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "ad",
+      "id": 8
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "adsad",
+      "id": 9
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "hhhhhhhhh",
+      "id": 10
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "adsadasdad",
+      "id": 11
+    },
+    {
+      "user_id": 1,
+      "product_id": 3,
+      "comment": "deneme",
+      "id": 12
+    }
+  ],
+  "shoppingCart": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "cart": []
+    }
+  ],
+  "logs": [
+    {
+      "message": "User <1> purchased some coffees.",
+      "createdDate": "2022-03-20T19:46:50.314Z",
+      "id": 1
+    }
+  ]
+}
