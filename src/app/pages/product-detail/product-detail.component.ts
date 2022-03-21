@@ -37,12 +37,14 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         return;
       }
       this.product = (product as Product);
+
+      this.getHowManyOfThisProductsHasBeenAddedToCart();
+      
       this.getProductCommentsSubscription = this.productService.getProductComments(this.product.id).subscribe(comments=>{
         this.comments = comments;
       });
     })
 
-    this.getHowManyOfThisProductsHasBeenAddedToCart();
     this.createAddCommentForm();
   }
 

@@ -1,19 +1,19 @@
 {
   "users": [
-      {
-          "username": "emrhn1888",
-          "password": "12345678",
-          "name": "Emirhan",
-          "email": "ay_emirhan@hotmail.com",
-          "id": 1
-        },
-        {
-          "username": "ycaktirma",
-          "password": "123qwe",
-          "name": "Yarkın",
-          "email": "ycaktirma@gmail.com",
-          "id": 2
-        }
+    {
+      "username": "emrhn1888",
+      "password": "12345678",
+      "name": "Emirhan",
+      "email": "ay_emirhan@hotmail.com",
+      "id": 1
+    },
+    {
+      "username": "ycaktirma",
+      "password": "123qwe",
+      "name": "Yarkın",
+      "email": "ycaktirma@gmail.com",
+      "id": 2
+    }
   ],
   "products": [
     {
@@ -228,23 +228,23 @@
       "category": "Smoothies"
     }
   ],
-  "productComments": [
-
-  ],
+  "productComments": [],
   "shoppingCart": [
-      {
-          "id":1,
-          "user_id":1,
-          "cart":[]
-      },
-      {
-          "id":2,
-          "user_id":2,
-          "cart":[]
-      }
-
+    {
+      "id": 1,
+      "user_id": 1,
+      "cart": []
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "cart": [
+        {
+          "product_id": 3,
+          "count": 6
+        }
+      ]
+    }
   ],
-  "logs": [
-
-  ]
+  "logs": []
 }

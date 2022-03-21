@@ -11,12 +11,12 @@ Don't forget to add your comments on products :)
 ## Or run the project on your local machine:
 
 1. First download the code
-` git clone https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-ycaktirma.git `
+``git clone https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-ycaktirma.git``
 
 2. Navigate to project directory 
-`cd hafta-4-odev-assignment-ycaktirma`
+``cd hafta-4-odev-assignment-ycaktirma``
 3. Run 
-`npm install`
+``npm install``
 4. Start the application using `npm run dev-start` (Shorthand for `json-server --watch database.json & ng serve`)
 
 ## NOTES

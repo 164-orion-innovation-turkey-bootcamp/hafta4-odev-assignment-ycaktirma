@@ -9,7 +9,7 @@
     "test": "ng test",
     "postinstall": "ng build --aot --prod",
     "heroku-postbuild": "ng build --prod",
-    "dev-start": "json-server --watch database.json & ng serve"
+    "dev-start": "json-server --watch database.json & ng serve --o"
   },
   "private": true,
   "dependencies": {
