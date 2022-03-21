@@ -6,14 +6,14 @@
     display: inline-block;
 
     position: relative;
-    transform: translate(150px,220px);
+    transform: translate(100px,220px);
     z-index: -1;
 }
 .product-image{
     width: 480px;
     position: relative;
     bottom:300px;
-    left:-50px;
+    left:-20px;
     transition: transform 0.4s;
 }
 .product-image:hover{
@@ -110,5 +110,23 @@
     } 
     .comment-section{
         margin-top:200px;
+    }
+    .product-image{
+        width: 480px;
+        position: relative;
+        bottom:300px;
+        left:-35px;
+        transition: transform 0.4s;
+    }
+    .round{
+        width: 320px;
+        height: 320px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+    
+        position: relative;
+        transform: translate(80px,220px);
+        z-index: -1;
     }
 }

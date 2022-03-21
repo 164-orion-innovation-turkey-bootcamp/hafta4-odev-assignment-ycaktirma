@@ -6,7 +6,7 @@ Application has no real database connection, all the user data is stored on json
 
 # [LIVE](https://yarkinscoffeestore.herokuapp.com/)
 
-## Instructions
+## Or run the project on your local machine:
 
 1. First download the code
 ` git clone https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-ycaktirma.git `
