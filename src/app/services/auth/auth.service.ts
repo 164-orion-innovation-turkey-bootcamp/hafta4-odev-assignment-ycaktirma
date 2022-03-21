@@ -8,6 +8,7 @@ import { UserLogin } from 'src/app/models/user-login';
 import { SessionService } from '../session/session.service';
 import { UserSession } from 'src/app/models/user-session';
 import { CartService } from '../cart/cart.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,10 +25,15 @@ export class AuthService {
    */
   createNewAccount(account:User): Observable<any>{
     let targetApiEndpoint = environment.baseApiUrl+this.userTableName;
+
+    //Check if the user exists
     return this.checkIfUserExists(account.email).pipe(switchMap( (exists)=>{
+
+      //Return userExists
       if(exists){
         return of('userExists');
       }
+      //If user doesn't exist, perform user registration.
       else{
         return this.http.post(targetApiEndpoint, account).pipe(switchMap((newAccount)=>{
           return this.cartService.initializeUserCartOnDatabase((newAccount as any).id);
@@ -43,7 +49,7 @@ export class AuthService {
    * @returns Observable<boolean>
    */
    login(userLogin:UserLogin): Observable<boolean>{
-    //Login logic flag
+    //Login flag
     let successful:boolean = false;
     let targetApiEndpoint = environment.baseApiUrl+this.userTableName;
 
@@ -55,17 +61,17 @@ export class AuthService {
           successful = true;
           let userSession;
           if(user.id != undefined){
+            //Create new UserSession on successful login.
             userSession = new UserSession(user.id,new Date());
             this.sessionService.createNewSession(userSession);
           }
         }
       })
-
-        return of(successful);
+      //Return true if login is successful
+      return of(successful);
       
       
     }))
-    //return from([this.cartService.initializeUserCartOnDatabase(),])
   }
 
   /**
@@ -74,12 +80,14 @@ export class AuthService {
    * @returns 
    */
   private checkIfUserExists(email:string):Observable<boolean>{
+
+    //Exists flag
     let ifExists:boolean = false;
     return this.http.get<User[]>(environment.baseApiUrl + this.userTableName).pipe(map(data=>{
       data.forEach(user=>{
         //If the db has the email already;
         if( user.email === email){
-          //login is successful
+          //return true
           ifExists = true;
         }
       })
@@ -109,7 +117,7 @@ export class AuthService {
    * @param {UserLogin}id 
    * @returns Observable<User | null>
    */
-  getUserByEmailAndPassword(userLogin:UserLogin){
+  getUserByEmailAndPassword(userLogin:UserLogin):Observable<User | null>{
     let foundUser: User | null = null;
     return this.http.get<User[]>(environment.baseApiUrl + this.userTableName).pipe(map(users=>{
       users.forEach(user=>{

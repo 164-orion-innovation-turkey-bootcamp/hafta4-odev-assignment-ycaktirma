@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MessageBoxComponent implements OnInit {
 
+  //Message that displayed
   @Input() text:string='';
   
   constructor() { }

@@ -13,7 +13,8 @@ export class ShopGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return (this.sessionService.isLoggedIn()) ? true : this.router.parseUrl('/login') ;
+      //Users shouldn't be able to access products and shop page if they are not logged in.
+      return (this.sessionService.isLoggedIn()) ? true : this.router.parseUrl('/login') ;
   }
   
 }

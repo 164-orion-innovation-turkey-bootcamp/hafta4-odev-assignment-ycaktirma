@@ -7,6 +7,11 @@ import { SessionService } from '../session/session.service';
 import { Observable, map, switchMap, mergeMap,of, forkJoin, from } from 'rxjs';
 import { ProductService } from '../product/product.service';
 import { JsonServerLoggerService } from 'src/app/core/services/logger/json-server-logger.service';
+
+/**
+ * This service is responsible for cart operations, cart informations are stored on database.
+ */
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +21,6 @@ export class CartService {
   private targetApiEndpoint = environment.baseApiUrl + this.cartTableName;
 
   constructor(private sessionService:SessionService,private http:HttpClient,private productService:ProductService, private jsonServerLogger:JsonServerLoggerService) { }
-
 
   //Initialize cart object. (This is used when new account registers)
   initializeUserCartOnDatabase(user_id:number){
@@ -28,6 +32,7 @@ export class CartService {
     }
     return this.http.post(this.targetApiEndpoint,postData);
   }
+
   /**
    * Returns cart, Object:{id:number, user_id:number, cart:{product_id:number, count:number}[]}
    * @returns Observable<Object>
@@ -73,10 +78,12 @@ export class CartService {
           cart = cartItem;
         }
       });
+      //Return [] when the cart is empty.
       if(cart.cart.length == 0){
         return of (cartWithNames);
       }
       else{
+        //Get cart items and get product names for every cart item (cart.cart is the array that we store products)
         return from(cart.cart).pipe(mergeMap(cartItemReference=>{
           return this.productService.getProductById((cartItemReference as any).product_id).pipe(mergeMap(product=>{
             (cartItemReference as any).product_name = (product as Product).name;
@@ -145,10 +152,15 @@ export class CartService {
    */
   getTotalPriceOfTheCart(){
     let totalPrice=0; 
+
+    //Get cart first
     return this.getCart().pipe(mergeMap(activeUserCart=>{
       let cart = activeUserCart.cart;
+
+      //Iterate over every cart item in order to sum their prices.
       return from(cart).pipe(mergeMap(cartItem=>{
          
+        //Get product price and add to totalPrice
         return this.productService.getProductById(cartItem.product_id).pipe(map(product=>{
           totalPrice += (+(product as Product).price * cartItem.count);
           return totalPrice;

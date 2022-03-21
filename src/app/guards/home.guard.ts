@@ -13,7 +13,8 @@ export class HomeGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return !this.sessionService.isLoggedIn();
+      //If the users can go to home page after they login, they might get confused. So I don't let them for user experience
+      return !this.sessionService.isLoggedIn();
   }
   
 }

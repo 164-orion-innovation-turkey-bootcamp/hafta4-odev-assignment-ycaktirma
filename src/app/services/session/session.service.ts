@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { UserSession } from 'src/app/models/user-session';
 
+/**
+ * This service is responsible for session operations, uses localStorage.
+ */
+
 @Injectable({
   providedIn: 'root'
 })
 
-/**
- * This service is responsible for session operations, uses localStorage.
- */
 export class SessionService {
 
   constructor() { }

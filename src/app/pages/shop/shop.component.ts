@@ -16,6 +16,7 @@ export class ShopComponent implements OnInit, OnDestroy{
   productCategories:ProductCategory[] = [];
 
   getProductsSubscription:Subscription | null =null;
+  getProductCategoriesSubscription:Subscription | null =null;
 
   filter='';
   selectedCategory=1;
@@ -33,23 +34,28 @@ export class ShopComponent implements OnInit, OnDestroy{
     if(this.getProductsSubscription != null){
       this.getProductsSubscription.unsubscribe();
     }  
+    if(this.getProductCategoriesSubscription != null){
+      this.getProductCategoriesSubscription.unsubscribe();
+    }  
   }
 
   //Get coffees and remove subscription after that.
   getCoffees(){
     this.getProductsSubscription = this.productService.getProducts(this.filter,this.selectedCategory).subscribe(products=>{
       this.products = products || [];
-      
     });
 
     
   }
 
+  //Get product categories
   getCategories(){
-    this.productService.getProductCategories().subscribe(categories=>{
+    this.getProductCategoriesSubscription = this.productService.getProductCategories().subscribe(categories=>{
       this.productCategories = categories;
     })
   }
+
+  //Refresh products when the cart is closed.
   onCartClosedHandler(e:any){
     this.getCoffees();
   }

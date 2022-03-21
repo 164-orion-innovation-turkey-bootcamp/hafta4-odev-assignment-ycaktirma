@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControlOptions } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { UserLogin } from 'src/app/models/user-login';
 import { AuthService } from 'src/app/services/auth/auth.service';
@@ -10,17 +11,25 @@ import { passwordAgainValidator } from '../../validators/password-again-validato
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent implements OnInit, OnDestroy {
 
   signupForm:FormGroup | any;
   showSignupErrorMessageBox:boolean = false;
+  createNewAccountSubscription:Subscription | null = null;
+
   constructor(private formBuilder:FormBuilder, private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
     this.createSignupForm();
     this.showSignupErrorMessageBox = false;
   }
+  ngOnDestroy(): void {
+      if(this.createNewAccountSubscription != null){
+        this.createNewAccountSubscription.unsubscribe();
+      }
+  }
 
+  //Create signup form
   createSignupForm(){
     this.signupForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(3)] ],
@@ -33,7 +42,9 @@ export class SignupComponent implements OnInit {
     })
   }
 
+  //signupForm handler
   onSubmit(){
+
     //Defensive check
     if(!this.signupForm.valid){
       return;
@@ -48,7 +59,7 @@ export class SignupComponent implements OnInit {
                     );
 
     //Send request
-    this.authService.createNewAccount(user).subscribe((response)=>{
+    this.createNewAccountSubscription = this.authService.createNewAccount(user).subscribe((response)=>{
       let newUserLogin:UserLogin={
         email: user.email,
         password: user.password

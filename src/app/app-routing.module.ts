@@ -16,8 +16,7 @@ const routes: Routes = [
   },
   {
     path:'home',
-    component:HomepageComponent,
-    canActivate: [HomeGuard],
+    component:HomepageComponent
   },
   {
     path:'shop',
@@ -30,6 +29,11 @@ const routes: Routes = [
       {
         path:'product/:id',
         component:ProductDetailComponent
+      },
+      {
+        path:'**',
+        redirectTo:'',
+        pathMatch:'full'
       }
     ]
   },
@@ -41,10 +45,11 @@ const routes: Routes = [
     path:'login',
     component:LoginComponent
   },
-/*   {
+  {
     path:'**',
-    redirectTo:'/home'
-  } */
+    redirectTo:'/login',
+    pathMatch:'full'
+  } 
 ];
 
 @NgModule({
