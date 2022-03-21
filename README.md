@@ -6,6 +6,8 @@ Application has no real database connection, all the user data is stored on json
 
 # [LIVE](https://yarkinscoffeestore.herokuapp.com/)
 
+Don't forget to add your comments on products :)
+
 ## Or run the project on your local machine:
 
 1. First download the code
@@ -16,3 +18,7 @@ Application has no real database connection, all the user data is stored on json
 3. Run 
 `npm install`
 4. Start the application using `npm run dev-start` (Shorthand for `json-server --watch database.json & ng serve`)
+
+## NOTES
+* When you install the project and run it manually, it uses local json-server but live version uses this [this](https://yarkinscoffeestore-server.herokuapp.com) one.
+* You can see purchase logs [here](https://yarkinscoffeestore-server.herokuapp.com/logs).
