@@ -11,5 +11,8 @@ Application has no real database connection, all the user data is stored on json
 1. First download the code
 ` git clone https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-ycaktirma.git `
 
-2. Run `npm install`
-3. Start the application using `npm run dev-start` (Shorthand for `json-server --watch database.json & ng serve`)
+2. Navigate to project directory 
+`cd hafta-4-odev-assignment-ycaktirma`
+3. Run 
+`npm install`
+4. Start the application using `npm run dev-start` (Shorthand for `json-server --watch database.json & ng serve`)
