@@ -1,27 +1,14 @@
-# Yarkinscoffeestore
+#Yarkin's Coffee Store
+This is a web application which you can create an account and order coffee.You can also see other users comments on products!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+##Important note
+Application has no real database connection, all the user data is stored on json-server and it is public and passwords is NOT hashed. Please consider that everyone CAN see your password! Use random password instead of passwords that contains personal information (like 123qwe).
+#[LIVE](https://yarkinscoffeestore.herokuapp.com/)
 
-## Development server
+##Instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. First download the code
+` git clone https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-ycaktirma.git `
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Run `npm install`
+3. Start the application using `npm run dev-start` (Shorthand for `json-server --watch database.json & ng serve`)
